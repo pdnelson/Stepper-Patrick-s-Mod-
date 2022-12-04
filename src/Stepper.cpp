@@ -356,6 +356,29 @@ void Stepper::stepMotor(int thisStep)
   }
 }
 
+void Stepper::releaseMotorCurrent()
+{
+	switch (this->pin_count) {
+		case 2:
+			digitalWrite(this->motor_pin_1, LOW);
+			digitalWrite(this->motor_pin_2, LOW);
+			break;
+		case 4:
+			digitalWrite(this->motor_pin_1, LOW);
+			digitalWrite(this->motor_pin_2, LOW);
+			digitalWrite(this->motor_pin_3, LOW);
+			digitalWrite(this->motor_pin_4, LOW);
+			break;
+		case 5:
+			digitalWrite(this->motor_pin_1, LOW);
+			digitalWrite(this->motor_pin_2, LOW);
+			digitalWrite(this->motor_pin_3, LOW);
+			digitalWrite(this->motor_pin_4, LOW);
+			digitalWrite(this->motor_pin_5, LOW);
+			break;
+	}
+}
+
 /*
   version() returns the version of the library:
 */

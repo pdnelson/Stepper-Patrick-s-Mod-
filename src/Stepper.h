@@ -95,6 +95,9 @@ class Stepper {
 
     // mover method:
     void step(int number_of_steps);
+	
+	// Set all motor pins to 0 so the motor does not draw any current.
+	void releaseMotorCurrent();
 
     int version(void);
 
