@@ -384,5 +384,5 @@ void Stepper::releaseMotorCurrent()
 */
 int Stepper::version(void)
 {
-  return 5;
+  return 6;
 }
